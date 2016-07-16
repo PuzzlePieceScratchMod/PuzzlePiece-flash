@@ -73,7 +73,7 @@ public class Specs {
 		[11, "Parameter",	parameterColor],
 		[12, "List",		listColor],
 		[20, "Extension",	extensionsColor],
-	];
+		[21, "old",             
 
 	public static function blockColor(categoryID:int):int {
 		if (categoryID > 100) categoryID -= 100;
