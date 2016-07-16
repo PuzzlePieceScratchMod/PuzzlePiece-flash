@@ -67,12 +67,16 @@ public class Specs {
 		[5,  "Events",		0xc88330],
 		[6,  "Control",		0xe1a91a],
 		[7,  "Sensing",		0x2ca5e2],
-		[8,  "Operators",	0x5cb712],
+		[8,  "Math",    	0x5cb712],
 		[9,  "Data",		variableColor],
 		[10, "More Blocks",	procedureColor],
 		[11, "Parameter",	parameterColor],
 		[12, "List",		listColor],
 		[20, "Extension",	extensionsColor],
+		[21, "Old",             0xCCFF00],
+		[22, "Strings",         0x5cb712],
+		[23, "Python",          0x00FFFF],
+		[24, "Lambda",          0xFFFF00],     
 	];
 
 	public static function blockColor(categoryID:int):int {
