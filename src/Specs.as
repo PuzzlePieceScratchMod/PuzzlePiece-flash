@@ -335,7 +335,7 @@ public class Specs {
 		["%b or %b",							"b", 8, "|"],
 		["not %b",								"b", 8, "not"],
 		["-"],
-		["join %s %s",							"r", 8, "concatenate:with:",	"hello ", "world"],
+		["join %s %s",							"r", 22, "concatenate:with:",	"hello ", "world"],
 		["letter %n of %s",						"r", 8, "letter:of:",			1, "world"],
 		["length of %s",						"r", 8, "stringLength:",		"world"],
 		["-"],
@@ -372,31 +372,31 @@ public class Specs {
 		// obsolete blocks from Scratch 1.4 that are converted to new forms (so should never appear):
 		["abs %n",								"r", 98, "abs"],
 		["sqrt %n",								"r", 98, "sqrt"],
-		["stop script",							"f", 98, "doReturn"],
-		["stop all",							"f", 98, "stopAll"],
-		["switch to background %m.costume",		" ", 98, "showBackground:", "backdrop1"],
-		["next background",						" ", 98, "nextBackground"],
-		["forever if %b",						"cf",98, "doForeverIf"],
+		["stop script",							"f", 21, "doReturn"],
+		["stop all",							"f", 21, "stopAll"],
+		["switch to background %m.costume",		" ", 121, "showBackground:", "backdrop1"],
+		["next background",						" ", 121, "nextBackground"],
+		["forever if %b",						"cf",21, "doForeverIf"],
 
 		// testing and experimental control prims
-		["noop",								"r", 99, "COUNT"],
-		["counter",								"r", 99, "COUNT"],
-		["clear counter",						" ", 99, "CLR_COUNT"],
-		["incr counter",						" ", 99, "INCR_COUNT"],
-		["for each %m.varName in %s",			"c", 99, "doForLoop", "v", 10],
-		["while %b",							"c", 99, "doWhile"],
-		["all at once",							"c", 99, "warpSpeed"],
+		["noop",								"r", 21, "COUNT"],
+		["counter",								"r", 21, "COUNT"],
+		["clear counter",						" ", 21, "CLR_COUNT"],
+		["incr counter",						" ", 21, "INCR_COUNT"],
+		["for each %m.varName in %s",			"c", 21, "doForLoop", "v", 10],
+		["while %b",							"c", 21, "doWhile"],
+		["all at once",							"c", 21, "warpSpeed"],
 
 		// stage motion (scrolling)
-		["scroll right %n",						" ", 99, "scrollRight",		10],
-		["scroll up %n",						" ", 99, "scrollUp",		10],
-		["align scene %m.scrollAlign",			" ", 99, "scrollAlign",		'bottom-left'],
-		["x scroll",							"r", 99, "xScroll"],
-		["y scroll",							"r", 99, "yScroll"],
+		["scroll right %n",						" ", 21, "scrollRight",		10],
+		["scroll up %n",						" ", 21, "scrollUp",		10],
+		["align scene %m.scrollAlign",			" ", 21, "scrollAlign",		'bottom-left'],
+		["x scroll",							"r", 21, "xScroll"],
+		["y scroll",							"r", 21, "yScroll"],
 
 		// other obsolete blocks from alpha/beta
-		["hide all sprites",					" ", 99, "hideAll"],
-		["user id",								"r", 99, "getUserId"],
+		["hide all sprites",					" ", 21, "hideAll"],
+		["user id",								"r", 21, "getUserId"],
 
 	];
 
