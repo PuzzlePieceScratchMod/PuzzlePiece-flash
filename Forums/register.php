@@ -7,7 +7,7 @@ if ($ms_user['valid']) {
 }
 
 if ($ms_config['disableregistration']) {
-	$page_title = 'Registrations disabled - Mod Share';
+	$page_title = 'It seems that registrations are disabled. - PuzzlePiece';
 	echo '<p><img src="/img/denied.jpg" alt="registrations disabled"/><br />Registrations have been temporarily disabled. Please come back later.</p>';
 	return;
 }
@@ -45,7 +45,7 @@ $api_url = 'http://scratch.mit.edu/site-api/comments/project/' . $project_id . '
 if (isset($_POST['reg_form_sent']) && !empty($_SESSION['verifieduser'])) {
 	$result = $db->query('SELECT 1 FROM users WHERE username=\'' . $db->escape($_SESSION['verifieduser']) . '\'') or error('Failed to check if user already exists', __FILE__, __LINE__, $db->error());
 	if ($db->num_rows($result)) {
-		registrationform('This user already exists on Mod Share. Please try a different user.');
+		registrationform('This user already exists on this server. Please try a different user.');
 		return;
 	}
 	if ($_POST['pwd1'] != $_POST['pwd2']) {
