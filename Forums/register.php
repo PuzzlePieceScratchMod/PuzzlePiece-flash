@@ -39,7 +39,7 @@ function registrationform($error = null) {
 	<?php
 }
 
-$project_id = '10135908/';
+$project_id = '116535793/';
 $project_url = 'http://scratch.mit.edu/projects/' . $project_id;
 $api_url = 'http://scratch.mit.edu/site-api/comments/project/' . $project_id . '?page=1&salt=' . md5(time()); //salt is to prevent caching
 if (isset($_POST['reg_form_sent']) && !empty($_SESSION['verifieduser'])) {
