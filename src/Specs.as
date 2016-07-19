@@ -383,7 +383,7 @@ public class Specs {
 		["counter",								"r", 21, "COUNT"],
 		["clear counter",						" ", 21, "CLR_COUNT"],
 		["incr counter",						" ", 21, "INCR_COUNT"],
-		["for each %m.varName in %s",			"c", 21, "doForLoop", "v", 10],
+		["for each %m.varName in %n",			"c", 21, "doForLoop", "v", 10],
 		["while %b",							"c", 21, "doWhile"],
 		["all at once",							"c", 21, "warpSpeed"],
 
@@ -397,6 +397,13 @@ public class Specs {
 		// other obsolete blocks from alpha/beta
 		["hide all sprites",					" ", 21, "hideAll"],
 		["user id",								"r", 21, "getUserId"],
+		// strings
+		["%s as a script",                                              " ", 22, "move 1 steps"],
+		["%s as reporter",                                            "R", 22],
+		["%s as boolean",                                             "b", 22],
+		// python
+		["code %s",                                                   " ", 23],
+		["code %s",                                                   "R", 23],
 
 	];
 
