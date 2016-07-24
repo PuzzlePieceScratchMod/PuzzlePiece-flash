@@ -7,8 +7,8 @@ if ($ms_user['valid']) {
 }
 
 if ($ms_config['disableregistration']) {
-	$page_title = 'It seems that registrations are disabled. - PuzzlePiece';
-	echo '<p><img src="/img/denied.jpg" alt="registrations disabled"/><br />Registrations have been temporarily disabled. Please come back later.</p>';
+	$page_title = 'It seems that registrations are currently disabled. - PuzzlePiece';
+	echo 'registrations disabled"/><br />Registrations have been temporarily disabled. Please come back later.</p>';
 	return;
 }
 
