@@ -14,15 +14,6 @@ $data = file_get_contents($api_url);
         $comment = trim($val);
         if ($user == $requested_user /* this variable needs to represent the username you're looking for */ && $comment == $verification_code /* whatever verification code you're looking for */) {
             $success = true;
-            CREATE TABLE users (
-            user_id     INT(8) NOT NULL AUTO_INCREMENT,
-            user_name   VARCHAR(30) NOT NULL,
-            user_pass   VARCHAR(255) NOT NULL,
-            user_date   DATETIME NOT NULL,
-            user_level  INT(8) NOT NULL,
-            UNIQUE INDEX user_name_unique (user_name),
-            PRIMARY KEY (user_id)
-            ) TYPE=INNODB;
             echo 'logged in. You can close this now.'
             break;
         }
