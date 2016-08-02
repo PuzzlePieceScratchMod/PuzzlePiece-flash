@@ -293,7 +293,7 @@ public class Specs {
 		["-"],
 		["current %m.timeAndDate", 				"r", 7, "timeAndDate",			"minute"],
 		["days since 2000", 					"r", 7, "timestamp"],
-		["username",							"r", 7, "getUserName"],
+		["Mod Share/Fetch Username",							"r", 7, "getUserName"],
 
 		// stage sensing
 		["ask %s and wait",						" ", 107, "doAsk", 				"What's your name?"],
@@ -320,10 +320,12 @@ public class Specs {
 		["username",							"r", 107, "getUserName"],
 
 		// operators
-		["%n + %n",								"r", 8, "+",					"", ""],
-		["%n - %n",								"r", 8, "-",					"", ""],
-		["%n * %n",								"r", 8, "*",					"", ""],
-		["%n / %n",								"r", 8, "/",					"", ""],
+		["%n + %n",								"r", 8, "+"],					"", ""],
+		["%n - %n",								"r", 8, "-"],					"", ""],
+		["%n * %n",								"r", 8, "*"],					"", ""],
+		["%n / %n",								"r", 8, "/"],
+		["%n ^ %n",                                                             "r", 8, ":^:"],
+		["%n root of %n",                                                       "r", 8, ":RootOf:"],
 		["-"],
 		["pick random %n to %n",		"r", 8, "randomFrom:to:",		1, 10],
 		["-"],
@@ -335,7 +337,6 @@ public class Specs {
 		["%b or %b",							"b", 8, "|"],
 		["not %b",								"b", 8, "not"],
 		["-"],
-		["join %s %s",							"r", 22, "concatenate:with:",	"hello ", "world"],
 		["letter %n of %s",						"r", 8, "letter:of:",			1, "world"],
 		["length of %s",						"r", 8, "stringLength:",		"world"],
 		["-"],
@@ -349,6 +350,8 @@ public class Specs {
 		["change %m.var by %n",								" ", 9, CHANGE_VAR],
 		["show variable %m.var",							" ", 9, "showVariable:"],
 		["hide variable %m.var",							" ", 9, "hideVariable:"],
+		["mesh variable %s",                                                            "r", 9, "MeshVar:"],
+		["set mesh variable %s to %s",                                                  " ", 9, "SetMeshVar::"],
 
 		// lists
 		["add %s to %m.list",								" ", 12, "append:toList:"],
@@ -365,13 +368,13 @@ public class Specs {
 		["hide list %m.list",								" ", 12, "hideList:"],
 
 		// obsolete blocks from Scratch 1.4 that may be used in older projects
-		["play drum %n for %n beats",			" ", 98, "drum:duration:elapsed:from:", 1, 0.25], // Scratch 1.4 MIDI drum
-		["set instrument to %n",				" ", 98, "midiInstrument:", 1],
-		["loud?",								"b", 98, "isLoud"],
+		["play drum %n for %n beats",			" ", 21, "drum:duration:elapsed:from:", 1, 0.25], // Scratch 1.4 MIDI drum
+		["set instrument to %n",				" ", 21, "midiInstrument:", 1],
+		["loud?",								"b", 21, "isLoud"],
 
 		// obsolete blocks from Scratch 1.4 that are converted to new forms (so should never appear):
-		["abs %n",								"r", 98, "abs"],
-		["sqrt %n",								"r", 98, "sqrt"],
+		["abs %n",								"r", 21, "abs"],
+		["sqrt %n",								"r", 21, "sqrt"],
 		["stop script",							"f", 21, "doReturn"],
 		["stop all",							"f", 21, "stopAll"],
 		["switch to background %m.costume",		" ", 121, "showBackground:", "backdrop1"],
@@ -396,14 +399,20 @@ public class Specs {
 
 		// other obsolete blocks from alpha/beta
 		["hide all sprites",					" ", 21, "hideAll"],
-		["user id",								"r", 21, "getUserId"],
+		["Mod Share/Fetch user id",								"r", 21, "getUserId"],
 		// strings
 		["%s as a script",                                              " ", 22, "move 1 steps"],
 		["%s as reporter",                                            "R", 22],
 		["%s as boolean",                                             "b", 22],
+		["-"],
+		["join %s %s",							"r", 22, "concatenate:with:",	"hello ", "world"],
 		// python
-		["code %s",                                                   " ", 23],
-		["code %s",                                                   "R", 23],
+		["code %s",                                                   " ", 23, "PyCode:",    "print 'hi'"],
+		["code %s",                                                   "R", 23, "PyReport:"],
+		["code %s",                                                   "b", 23, "PyBool:"],
+		["-"],
+		["import %s",                                                 " ", 23, "PyImp:",     "sys"],
+		["print %s",                                                  " ", 23, "PyPrint:",   "Hello, World!"],
 
 	];
 
